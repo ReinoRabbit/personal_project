@@ -1,8 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/components/button_reusable.dart';
 import 'package:personal_project/components/logo_image.dart';
 import 'package:personal_project/components/text_field.dart';
-import 'package:personal_project/ui/dashboard_page.dart';
 import 'package:personal_project/ui/login_page.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -15,6 +15,8 @@ class SignUpPage extends StatefulWidget {
 class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController _passwordTextController = TextEditingController();
   final TextEditingController _emailTextController = TextEditingController();
+  final TextEditingController _passwordConfirmTextController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,18 +28,19 @@ class _SignUpPageState extends State<SignUpPage> {
               padding: const EdgeInsets.all(20.0),
               child: SingleChildScrollView(
                 child: Column(children: [
+                  
                   logoWidget("lib/images/logo.png"),
-                  const SizedBox(height: 5,),
+                  const SizedBox(height: 0,),
                   const Text("Sign up to Shape Shift",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  const SizedBox(height: 50,),
-                  textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
-                  const SizedBox(height: 40,),
-                  textFieldWidget("Enter password here", Icons.lock_outline, true, _passwordTextController),
                   const SizedBox(height: 30,),
-                  reusableButton(context, false, () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const DashboardPage(),));
-                  }),
+                  textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
+                  const SizedBox(height: 20,),
+                  textFieldWidget("Enter password here", Icons.lock_outline, true, _passwordTextController),
+                  const SizedBox(height: 20,),
+                  textFieldWidget("Confirm Password", Icons.lock_outline, true, _passwordConfirmTextController),
+                  const SizedBox(height: 25,),
+                  reusableButton(context, false, () { signUp(); }),
                   loginOption()
                   ]),
               ),
@@ -60,11 +63,45 @@ class _SignUpPageState extends State<SignUpPage> {
           },
           child: const Text(
             "Login",
-            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.red,
+            fontWeight: FontWeight.bold,
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.red,
+            decorationThickness: 1
+            ),
           ),
         )
       ],
     );
+  }
+
+  Future signUp() async {
+    if (passwordConfirmed()) {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: _emailTextController.text.trim(),
+      password: _passwordTextController.text.trim()
+      );
+      //push navigation here
+    }
+    else {
+      //push navigation here
+    }
+  }
+
+  bool passwordConfirmed() {
+    if (_passwordTextController.text.trim() == _passwordConfirmTextController.text.trim()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  @override
+  void dispose() {
+    _emailTextController.dispose();
+    _passwordTextController.dispose();
+    _passwordConfirmTextController.dispose();
+    super.dispose();
   }
 
 }

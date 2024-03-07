@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 50,),
                   textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
-                  const SizedBox(height: 40,),
+                  const SizedBox(height: 30,),
                   textFieldWidget("Enter password here", Icons.lock_outline, true, _passwordTextController),
                   const SizedBox(height: 30,),
                   reusableButton(context, true, () { signIn(); }),
@@ -59,7 +59,13 @@ class _LoginPageState extends State<LoginPage> {
           },
           child: const Text(
             "Sign Up",
-            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: Colors.red,
+              fontWeight: FontWeight.bold,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.red,
+              decorationThickness: 1
+            ),
           ),
         )
       ],
