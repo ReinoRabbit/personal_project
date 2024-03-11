@@ -40,7 +40,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   const SizedBox(height: 20,),
                   textFieldWidget("Confirm Password", Icons.lock_outline, true, _passwordConfirmTextController),
                   const SizedBox(height: 25,),
-                  reusableButton(context, false, () { signUp(); }),
+                  reusableButton(context, false, () { signUp(context); }),
                   loginOption()
                   ]),
               ),
@@ -75,18 +75,19 @@ class _SignUpPageState extends State<SignUpPage> {
     );
   }
 
-  Future signUp() async {
-    if (passwordConfirmed()) {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+  Future signUp(BuildContext context) async {
+  if (passwordConfirmed()) {
+    await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: _emailTextController.text.trim(),
       password: _passwordTextController.text.trim()
-      );
-      //push navigation here
-    }
-    else {
-      //push navigation here
-    }
+    );
+
+    // ignore: use_build_context_synchronously
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('User registered successfully please login!'))
+    );
   }
+}
 
   bool passwordConfirmed() {
     if (_passwordTextController.text.trim() == _passwordConfirmTextController.text.trim()) {
