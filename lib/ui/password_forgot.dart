@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/components/button_reusable.dart';
+import 'package:personal_project/components/logo_image.dart';
 import 'package:personal_project/components/text_field.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
@@ -26,6 +27,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            logoWidget("lib/images/logo.png"),
             const SizedBox(height: 30,),
             const Text('Enter your email and we will send you a reset link.',
             textAlign: TextAlign.center,),
