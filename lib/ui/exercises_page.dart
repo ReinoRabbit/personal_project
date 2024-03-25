@@ -24,16 +24,47 @@ class _ExercisesPageState extends State<ExercisesPage> {
             Navigator.push(context, MaterialPageRoute(builder: ((context) => const DashboardPage())));
           },),],
         ),
-      
-        body: const Center(
-          child: Column( children: [
-            SizedBox(height: 10,),
-            Text("exercises"),
-          ],
+
+        //instructions card
+
+        body: const SingleChildScrollView(
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+
+              Padding(
+                padding: EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity, // Set width to 100%
+                  child: Card(
+                    color: Colors.deepPurple,
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Center(
+                        child: Text(
+                          'Choose an exercise below:',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              // list of exercises below
+
+            ],
           ),
         ),
-      
-        ),
+      ),
     );
   }
 }
