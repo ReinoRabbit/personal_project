@@ -19,7 +19,10 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Center(child:
-          Text("Shape Shift", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),
+          Padding(
+            padding: EdgeInsets.only(left: 50),
+            child: Text("Shape Shift", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),
+          ),
         ),
         iconTheme: const IconThemeData(color: Colors.black),
         backgroundColor: Colors.black,
