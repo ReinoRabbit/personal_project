@@ -11,9 +11,9 @@ Container reusableButton (BuildContext context, bool isLogin, Function onTap) {
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.resolveWith((states) {
           if (states.contains(MaterialState.pressed)) {
-            return Colors.green;
+            return Colors.deepPurple;
           }
-          return Colors.red;
+          return Colors.black;
         }),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))

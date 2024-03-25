@@ -29,8 +29,8 @@ class _SignUpPageState extends State<SignUpPage> {
               child: SingleChildScrollView(
                 child: Column(children: [
                   
-                  logoWidget("lib/images/logo.png"),
-                  const SizedBox(height: 0,),
+                  logoWidget("lib/images/newlogo.png"),
+                  const SizedBox(height: 5,),
                   const Text("Sign up to Shape Shift",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                   const SizedBox(height: 30,),
@@ -63,10 +63,10 @@ class _SignUpPageState extends State<SignUpPage> {
           },
           child: const Text(
             "Login",
-            style: TextStyle(color: Colors.red,
+            style: TextStyle(color: Colors.deepPurple,
             fontWeight: FontWeight.bold,
             decoration: TextDecoration.underline,
-            decorationColor: Colors.red,
+            decorationColor: Colors.deepPurple,
             decorationThickness: 1
             ),
           ),

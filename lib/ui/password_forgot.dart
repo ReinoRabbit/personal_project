@@ -19,23 +19,35 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        title: const Center(child:
+            Padding(
+              padding: EdgeInsets.only(right: 50),
+              child: Text("Password Reset", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),
+            ),
+          ),
+        backgroundColor: Colors.black,
         elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            logoWidget("lib/images/logo.png"),
-            const SizedBox(height: 30,),
-            const Text('Enter your email and we will send you a reset link.',
-            textAlign: TextAlign.center,),
-            const SizedBox(height: 30,),
-            textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
-            const SizedBox(height: 30,),
-            reusableButton(context, true, () { passwordReset(context); }),
-          ],
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 30,),
+                logoWidget("lib/images/newlogo.png"),
+                const SizedBox(height: 30,),
+                const Text('Enter your email and we will send you a reset link',
+                textAlign: TextAlign.center, style: TextStyle(fontSize: 18),),
+                const SizedBox(height: 30,),
+                textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
+                const SizedBox(height: 30,),
+                reusableButton(context, true, () { passwordReset(context); }),
+              ],
+            ),
+          ),
         ),
       ),
     );
