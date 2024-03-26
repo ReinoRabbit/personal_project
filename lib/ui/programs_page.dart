@@ -35,12 +35,12 @@ class _ProgramsPageState extends State<ProgramsPage> {
               ,)),
 
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(6.0),
                 child: SizedBox(
                   width: double.infinity, // Set width to 100%
                   child: Card(
                     color: Colors.deepPurple,
-                    elevation: 4,
+                    elevation: 8,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
@@ -61,7 +61,73 @@ class _ProgramsPageState extends State<ProgramsPage> {
                 ),
               ),
 
-              // list of exercises below
+              // list of programs below
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/logo.png"),
+                            height: 200,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/logo.png"),
+                            height: 200,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/logo.png"),
+                            height: 200,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
 
             ],
           ),

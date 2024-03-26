@@ -37,12 +37,12 @@ class _ExercisesPageState extends State<ExercisesPage> {
               ,)),
 
               const Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(6.0),
                 child: SizedBox(
                   width: double.infinity, // Set width to 100%
                   child: Card(
                     color: Colors.deepPurple,
-                    elevation: 4,
+                    elevation: 8,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
@@ -64,6 +64,182 @@ class _ExercisesPageState extends State<ExercisesPage> {
               ),
 
               // list of exercises below
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/pullup.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/deadlift.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/bench.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/dips.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/lunge.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/overhead.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/rows.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
+
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Material(
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(12),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    color: Colors.deepPurple,
+                    child: InkWell(
+                      onTap: () {
+                        
+                      },
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: const AssetImage("lib/images/squat.png"),
+                            height: 100,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+              ),],),),),),),
 
             ],
           ),

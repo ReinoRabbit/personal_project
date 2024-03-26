@@ -101,7 +101,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     elevation: 8,
                     borderRadius: BorderRadius.circular(12),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Colors.red,
+                    color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: ((context) => const ExercisesPage())));
@@ -114,22 +114,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             height: 200,
                             width: double.infinity,
                             fit: BoxFit.cover,
-                          ),
-                          // const SizedBox(height: 5,),
-                          // const Text(
-                          //   "Exercises",
-                          //   style: TextStyle(
-                          //     fontSize: 20,
-                          //     fontWeight: FontWeight.bold,
-                          //     color: Colors.white,
-                          //   ),
-                          // ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+                          ),],),),),),),
         
               const SizedBox(height: 5,),
         
@@ -142,7 +127,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     elevation: 8,
                     borderRadius: BorderRadius.circular(12),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: Colors.red,
+                    color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: ((context) => const ProgramsPage())));
@@ -155,22 +140,7 @@ class _DashboardPageState extends State<DashboardPage> {
                             height: 200,
                             width: double.infinity,
                             fit: BoxFit.cover,
-                          ),
-                          // const SizedBox(height: 5,),
-                          // const Text(
-                          //   "Workout Programs",
-                          //   style: TextStyle(
-                          //     fontSize: 20,
-                          //     fontWeight: FontWeight.bold,
-                          //     color: Colors.white,
-                          //   ),
-                          // ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+                          ),],),),),),),
         
             ],
           ),
