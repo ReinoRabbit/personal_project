@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_project/ui/dashboard_page.dart';
+import 'package:personal_project/components/logo_image.dart';
 
 class ExercisesPage extends StatefulWidget {
   const ExercisesPage({super.key});
@@ -15,24 +15,28 @@ class _ExercisesPageState extends State<ExercisesPage> {
       child: Scaffold(
         appBar: AppBar(
           title: const Center(child:
-            Text("Shape Shift", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),
+            Padding(
+              padding: EdgeInsets.only(right: 50),
+              child: Text("Shape Shift", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.white)),
+            ),
           ),
           backgroundColor: Colors.black,
-          elevation: 0,
           iconTheme: const IconThemeData(color: Colors.white),
-          actions: <Widget>[IconButton(icon: const Icon(Icons.home), color: Colors.white, onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: ((context) => const DashboardPage())));
-          },),],
         ),
 
         //instructions card
 
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              
+              Center(child: SizedBox(
+                height: 85,
+                child: logoWidget("lib/images/ehead.png")
+              ,)),
 
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: SizedBox(
                   width: double.infinity, // Set width to 100%
