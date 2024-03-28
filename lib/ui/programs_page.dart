@@ -30,7 +30,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
             children: <Widget>[
 
               Center(child: SizedBox(
-                height: 85,
+                height: 70,
                 child: logoWidget("lib/images/phead.png")
               ,)),
 

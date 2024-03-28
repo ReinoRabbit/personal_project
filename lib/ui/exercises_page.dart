@@ -32,7 +32,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
             children: <Widget>[
               
               Center(child: SizedBox(
-                height: 85,
+                height: 70,
                 child: logoWidget("lib/images/ehead.png")
               ,)),
 
