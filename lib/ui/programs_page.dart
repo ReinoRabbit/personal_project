@@ -79,7 +79,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Ink.image(
-                            image: const AssetImage("lib/images/logo.png"),
+                            image: const AssetImage("lib/images/begin.png"),
                             height: 200,
                             width: double.infinity,
                             fit: BoxFit.cover,
@@ -101,7 +101,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Ink.image(
-                            image: const AssetImage("lib/images/logo.png"),
+                            image: const AssetImage("lib/images/inter.png"),
                             height: 200,
                             width: double.infinity,
                             fit: BoxFit.cover,
@@ -123,7 +123,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Ink.image(
-                            image: const AssetImage("lib/images/logo.png"),
+                            image: const AssetImage("lib/images/advance.png"),
                             height: 200,
                             width: double.infinity,
                             fit: BoxFit.cover,
