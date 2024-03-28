@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:personal_project/components/logo_image.dart';
+import 'package:personal_project/ui/benchpress_page.dart';
+import 'package:personal_project/ui/deadlifts_page.dart';
+import 'package:personal_project/ui/dips_page.dart';
+import 'package:personal_project/ui/lunges_page.dart';
+import 'package:personal_project/ui/overhead_press_page.dart';
+import 'package:personal_project/ui/pullups_page.dart';
+import 'package:personal_project/ui/rows_page.dart';
+import 'package:personal_project/ui/squats_page.dart';
 
 class ExercisesPage extends StatefulWidget {
   const ExercisesPage({super.key});
@@ -75,7 +83,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const PullupPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -97,7 +105,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const DeadliftsPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -119,7 +127,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const BenchpressPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -141,7 +149,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const DipsPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -163,7 +171,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const LungesPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -185,7 +193,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const OverheadPressPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -207,7 +215,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const RowsPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -229,7 +237,7 @@ class _ExercisesPageState extends State<ExercisesPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const SquatsPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,

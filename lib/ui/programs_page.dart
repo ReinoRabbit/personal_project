@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:personal_project/components/logo_image.dart';
+import 'package:personal_project/ui/advanced_program_page.dart';
+import 'package:personal_project/ui/beginner_program_page.dart';
+import 'package:personal_project/ui/intermediate_program_page.dart';
 
 class ProgramsPage extends StatefulWidget {
   const ProgramsPage({super.key});
@@ -73,7 +76,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const BeginnerProgramPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -95,7 +98,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const IntermediateProgramPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -117,7 +120,7 @@ class _ProgramsPageState extends State<ProgramsPage> {
                     color: Colors.deepPurple,
                     child: InkWell(
                       onTap: () {
-                        
+                        Navigator.push(context, MaterialPageRoute(builder: ((context) => const AdvancedProgramPage())));
                       },
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
