@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_project/components/logo_image.dart';
 
 class PullupPage extends StatefulWidget {
   const PullupPage({super.key});
@@ -23,12 +24,12 @@ class _PullupPageState extends State<PullupPage> {
           iconTheme: const IconThemeData(color: Colors.white),
         ),
         
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
 
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(6.0),
                 child: SizedBox(
                   width: double.infinity, // Set width to 100%
@@ -55,9 +56,36 @@ class _PullupPageState extends State<PullupPage> {
                 ),
               ),
 
-              // list of programs below
+              // content below
 
-              
+              const Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Text("Technique:",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 10,),
+
+              Center(child: SizedBox(
+                height: 200,
+                child: logoWidget("lib/images/pullupgif.gif")
+              ,)),
+
+              const SizedBox(height: 10,),
+
+              const Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Text("Explanation:",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
 
             ],
           ),
