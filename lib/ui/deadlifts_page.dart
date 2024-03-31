@@ -9,6 +9,7 @@ class DeadliftsPage extends StatefulWidget {
 }
 
 class _DeadliftsPageState extends State<DeadliftsPage> {
+  static const String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _DeadliftsPageState extends State<DeadliftsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Stand with feet hip-width apart, grip barbell with hands shoulder-width, lift barbell by extending hips and knees.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _DeadliftsPageState extends State<DeadliftsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The exercise strengthens the posterior chain which includes (back, glutes and hamstrings).\nIt also improves overall strength and helps to build muscle mass.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _DeadliftsPageState extends State<DeadliftsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Builds strength in back, glutes, and hamstrings. \n$bullet It also enhances overall strength and muscle development.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,

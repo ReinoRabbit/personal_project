@@ -9,6 +9,7 @@ class LungesPage extends StatefulWidget {
 }
 
 class _LungesPageState extends State<LungesPage> {
+  static const String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _LungesPageState extends State<LungesPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Step forward with one leg, lower body until both knees are bent at 90 degrees, then push back up.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _LungesPageState extends State<LungesPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The goal is to strengthen and develop leg muscles. Improve overall balance, and stability.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _LungesPageState extends State<LungesPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Builds strength and develops leg muscles \n$bullet Improves overall balance and stability \n$bullet Targets multiple lower body muscles',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,

@@ -9,6 +9,7 @@ class BenchpressPage extends StatefulWidget {
 }
 
 class _BenchpressPageState extends State<BenchpressPage> {
+  static const String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _BenchpressPageState extends State<BenchpressPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Lie on a flat bench, grip the barbell slightly wider than shoulder-width, lower it to chest, then push it back up.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _BenchpressPageState extends State<BenchpressPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The goal of the exercise is to get muscular development in the chest, shoulder, and triceps while improving the upper body pushing power.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _BenchpressPageState extends State<BenchpressPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Strengthens chest, shoulders, and triceps. \n$bullet Improves upper body pushing strength and power.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,

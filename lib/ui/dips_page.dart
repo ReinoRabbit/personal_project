@@ -9,6 +9,7 @@ class DipsPage extends StatefulWidget {
 }
 
 class _DipsPageState extends State<DipsPage> {
+  static const String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _DipsPageState extends State<DipsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Grip parallel bars, lower the body by bending the arms until 90\u00b0 of flexion, then push the body back up.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _DipsPageState extends State<DipsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The goal is to build muscle and strenghten the triceps, chest, and shoulders while also improving pushing strength.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _DipsPageState extends State<DipsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Builds tricep, chest, and shoulder strength \n$bullet It enhances pushing power and upper body stability.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,

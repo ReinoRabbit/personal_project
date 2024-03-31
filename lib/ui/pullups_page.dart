@@ -9,6 +9,7 @@ class PullupPage extends StatefulWidget {
 }
 
 class _PullupPageState extends State<PullupPage> {
+  static const String bullet = "\u2022";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _PullupPageState extends State<PullupPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Grip a pull-up bar with hands shoulder-width apart, palms facing away.\nPull body up until chin is over bar, then lower back down.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _PullupPageState extends State<PullupPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The goal for this exercise is to strengthen the upper body, improve grip strength, and enhance overall body control.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _PullupPageState extends State<PullupPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Builds back muscles \n$bullet Shoulder development \n$bullet Improves arm strength \n$bullet Improves grip strenght \n$bullet Better posture and body control',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
