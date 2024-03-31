@@ -9,6 +9,7 @@ class OverheadPressPage extends StatefulWidget {
 }
 
 class _OverheadPressPageState extends State<OverheadPressPage> {
+  static const String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _OverheadPressPageState extends State<OverheadPressPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Hold the barbell at shoulder height, press it overhead until arms are fully extended, then lower back down.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _OverheadPressPageState extends State<OverheadPressPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The goal is to develop shoulder and tricep muscles while improving overhead pressing ability.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _OverheadPressPageState extends State<OverheadPressPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Strengthens shoulders and triceps \n$bullet Improves overhead pressing strength \n$bullet Improves overall stability in the body',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,

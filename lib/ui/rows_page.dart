@@ -9,6 +9,7 @@ class RowsPage extends StatefulWidget {
 }
 
 class _RowsPageState extends State<RowsPage> {
+  static const String bullet = "\u2022 ";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -100,7 +101,7 @@ class _RowsPageState extends State<RowsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Explanation of the exercise',
+                          'Bend over at hips, grip barbell or dumbbells, pull weight towards body, then lower back down.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _RowsPageState extends State<RowsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Goal of the exercise',
+                          'The goal is to develop the back muscles and upper body pulling strength',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
@@ -170,7 +171,7 @@ class _RowsPageState extends State<RowsPage> {
                       padding: EdgeInsets.all(10.0),
                       child: Center(
                         child: Text(
-                          'Benefits of the exercise',
+                          '$bullet Builds back strength \n$bullet Improves overall posture \n$bullet It targets the upper back muscles for development.',
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
