@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_project/classes/beginner_exercises.dart';
 
 class BeginnerProgramPage extends StatefulWidget {
   const BeginnerProgramPage({super.key});
@@ -23,12 +24,12 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
           iconTheme: const IconThemeData(color: Colors.white),
         ),
         
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
 
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(6.0),
                 child: SizedBox(
                   width: double.infinity, // Set width to 100%
@@ -57,10 +58,42 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
 
               //content here
 
+              Center(
+                child: dataBody(),
+              )
+
+
             ],
           ),
         ),
       ),
+    );
+  }
+  
+  List<Exercises> exercises = [];
+
+  @override
+  void initState() {
+    exercises = Exercises.getExercises();
+    super.initState();
+  }
+
+  DataTable dataBody() {
+    return DataTable(
+      columns: const [
+        DataColumn(label: Text('Exercises'), numeric: false, tooltip: 'Exercise Names'),
+        DataColumn(label: Text('Sets x Reps'), numeric: false, tooltip: 'Amount of sets and reps')
+      ],
+      rows: exercises.map(
+        (e) => DataRow(cells: [
+          DataCell(
+            Text(e.exerciseName),
+          ),
+          DataCell(
+            Text(e.setsReps),
+          ),
+        ]),
+      ).toList(),
     );
   }
 }
