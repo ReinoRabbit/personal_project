@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/classes/beginner_exercises.dart';
 
@@ -60,8 +61,35 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
 
               Center(
                 child: dataBody(),
-              )
+              ),
 
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: OutlinedButton(
+                        child: Text("Selected exercises ${selectedExercises.length}"),
+                        onPressed: () {
+                          //onpressed for selected button
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: OutlinedButton(
+                        onPressed: selectedExercises.isEmpty ? null : () {
+                          //onpressed for the mark as done button
+                          deleteSelected();
+                        },
+                        child: const Text("Mark as done!"),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
             ],
           ),
@@ -71,12 +99,36 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
   }
   
   List<Exercises> exercises = [];
+  List<Exercises> selectedExercises = [];
 
   @override
   void initState() {
     exercises = Exercises.getExercises();
     super.initState();
   }
+
+  onSelectedRow(bool b, Exercises e) async {
+    setState(() {
+      if (b) {
+      selectedExercises.add(e);
+    } else {
+      selectedExercises.remove(e);
+    }
+    });
+  }
+
+  deleteSelected() async {
+  setState(() {
+    if (selectedExercises.isNotEmpty) {
+      List<Exercises> temp = [];
+      temp.addAll(selectedExercises);
+      for (Exercises exercise in temp) {
+        exercises.remove(exercise);
+        selectedExercises.remove(exercise);
+      }
+    }
+  });
+}
 
   DataTable dataBody() {
     return DataTable(
@@ -85,9 +137,22 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
         DataColumn(label: Text('Sets x Reps'), numeric: false, tooltip: 'Amount of sets and reps')
       ],
       rows: exercises.map(
-        (e) => DataRow(cells: [
+        (e) => DataRow(
+          selected: selectedExercises.contains(e),
+          onSelectChanged: (b) {
+            if (kDebugMode) {
+              print("onSelect");
+            }
+            onSelectedRow(b!, e);
+          },
+          cells: [
           DataCell(
             Text(e.exerciseName),
+            onTap: () {
+              if (kDebugMode) {
+                print('Selected ${e.exerciseName}');
+              }
+            },
           ),
           DataCell(
             Text(e.setsReps),
