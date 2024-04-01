@@ -1,4 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:personal_project/classes/intermediate_exercises.dart';
+
 
 class IntermediateProgramPage extends StatefulWidget {
   const IntermediateProgramPage({super.key});
@@ -23,12 +26,12 @@ class _IntermediateProgramPageState extends State<IntermediateProgramPage> {
           iconTheme: const IconThemeData(color: Colors.white),
         ),
         
-        body: const SingleChildScrollView(
+        body: SingleChildScrollView(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
 
-              Padding(
+              const Padding(
                 padding: EdgeInsets.all(6.0),
                 child: SizedBox(
                   width: double.infinity, // Set width to 100%
@@ -57,10 +60,107 @@ class _IntermediateProgramPageState extends State<IntermediateProgramPage> {
 
               //content here
 
+              Center(
+                child: dataBody(),
+              ),
+
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: OutlinedButton(
+                        child: Text("Selected exercises ${selectedExercises.length}"),
+                        onPressed: () {
+                          //onpressed for selected button
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: OutlinedButton(
+                        onPressed: selectedExercises.isEmpty ? null : () {
+                          //onpressed for the mark as done button
+                          deleteSelected();
+                        },
+                        child: const Text("Mark as done!"),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
             ],
           ),
         ),
       ),
     );
   }
+
+  List<Exercisesi> exercises = [];
+  List<Exercisesi> selectedExercises = [];
+
+  @override
+  void initState() {
+    exercises = Exercisesi.getExercises();
+    super.initState();
+  }
+
+  onSelectedRow(bool b, Exercisesi e) async {
+    setState(() {
+      if (b) {
+      selectedExercises.add(e);
+    } else {
+      selectedExercises.remove(e);
+    }
+    });
+  }
+
+  deleteSelected() async {
+  setState(() {
+    if (selectedExercises.isNotEmpty) {
+      List<Exercisesi> temp = [];
+      temp.addAll(selectedExercises);
+      for (Exercisesi exercise in temp) {
+        exercises.remove(exercise);
+        selectedExercises.remove(exercise);
+      }
+    }
+  });
+}
+
+  DataTable dataBody() {
+    return DataTable(
+      columns: const [
+        DataColumn(label: Text('Exercises'), numeric: false, tooltip: 'Exercise Names'),
+        DataColumn(label: Text('Sets x Reps'), numeric: false, tooltip: 'Amount of sets and reps')
+      ],
+      rows: exercises.map(
+        (e) => DataRow(
+          selected: selectedExercises.contains(e),
+          onSelectChanged: (b) {
+            if (kDebugMode) {
+              print("onSelect");
+            }
+            onSelectedRow(b!, e);
+          },
+          cells: [
+          DataCell(
+            Text(e.exerciseName),
+            onTap: () {
+              if (kDebugMode) {
+                print('Selected ${e.exerciseName}');
+              }
+            },
+          ),
+          DataCell(
+            Text(e.setsReps),
+          ),
+        ]),
+      ).toList(),
+    );
+  }
+
 }
