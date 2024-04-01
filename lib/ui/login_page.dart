@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:personal_project/components/button_reusable.dart';
 import 'package:personal_project/components/logo_image.dart';
 import 'package:personal_project/components/text_field.dart';
+import 'package:personal_project/ui/password_forgot.dart';
 import 'package:personal_project/ui/signup_page.dart';
 
 
@@ -27,15 +28,36 @@ class _LoginPageState extends State<LoginPage> {
               padding: const EdgeInsets.all(20.0),
               child: SingleChildScrollView(
                 child: Column(children: [
-                  logoWidget("lib/images/logo.png"),
+                  logoWidget("lib/images/newlogo.png"),
                   const SizedBox(height: 5,),
                   const Text("Login to Shape Shift",
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  const SizedBox(height: 50,),
-                  textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
-                  const SizedBox(height: 40,),
-                  textFieldWidget("Enter password here", Icons.lock_outline, true, _passwordTextController),
                   const SizedBox(height: 30,),
+                  textFieldWidget("Enter email here", Icons.person_outline, false, _emailTextController),
+                  const SizedBox(height: 30,),
+                  textFieldWidget("Enter password here", Icons.lock_outline, true, _passwordTextController),
+                  const SizedBox(height: 10,),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: ((context) => const ForgotPasswordPage())));
+                          },
+                          child: const Text('Forgot Password?',style: TextStyle(
+                            color: Colors.deepPurple,
+                            fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
+                            decorationColor: Colors.deepPurple,
+                            decorationThickness: 1,
+                          )),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 10,),
                   reusableButton(context, true, () { signIn(); }),
                   signUpOption()
                   ]),
@@ -59,7 +81,13 @@ class _LoginPageState extends State<LoginPage> {
           },
           child: const Text(
             "Sign Up",
-            style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: Colors.deepPurple,
+              fontWeight: FontWeight.bold,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.deepPurple,
+              decorationThickness: 1
+            ),
           ),
         )
       ],
