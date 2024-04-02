@@ -11,6 +11,7 @@ class AdvancedProgramPage extends StatefulWidget {
 }
 
 class _AdvancedProgramPageState extends State<AdvancedProgramPage> {
+  static const String bullet = "\u2022";
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -89,6 +90,100 @@ class _AdvancedProgramPageState extends State<AdvancedProgramPage> {
                       ),
                     ),
                   ],
+                ),
+              ),
+
+              const Padding(
+                padding: EdgeInsets.all(6.0),
+                child: SizedBox(
+                  width: double.infinity, // Set width to 100%
+                  child: Card(
+                    color: Colors.deepPurple,
+                    elevation: 8,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Center(
+                        child: Text(
+                          'Weekly Routine',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Card(
+                    elevation: 4,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12.0),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text.rich(
+                        TextSpan(
+                          children: <TextSpan>[
+                            TextSpan(
+                              text: 'Day 1:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: '\n$bullet Advanced workout program \n',
+                            ),
+                            TextSpan(
+                              text: 'Day 2:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: '\n$bullet Light Cardio \n',
+                            ),
+                            TextSpan(
+                              text: 'Day 3:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: '\n$bullet Advanced workout program \n',
+                            ),
+                            TextSpan(
+                              text: 'Day 4:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: '\n$bullet Light cardio or optional rest day \n',
+                            ),
+                            TextSpan(
+                              text: 'Day 5:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: '\n$bullet Advanced workout program \n',
+                            ),
+                            TextSpan(
+                              text: 'Day 6 & 7:',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            TextSpan(
+                              text: '\n$bullet Light cardio and Rest day (personal choice) \n',
+                            ),
+                          ],
+                          style: TextStyle(
+                            fontSize: 16.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
               ),
 
