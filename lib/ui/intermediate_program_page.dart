@@ -1,6 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/classes/intermediate_exercises.dart';
+import 'package:personal_project/ui/benchpress_page.dart';
+import 'package:personal_project/ui/deadlifts_page.dart';
+import 'package:personal_project/ui/lunges_page.dart';
+import 'package:personal_project/ui/overhead_press_page.dart';
+import 'package:personal_project/ui/pullups_page.dart';
+import 'package:personal_project/ui/squats_page.dart';
 
 
 class IntermediateProgramPage extends StatefulWidget {
@@ -247,6 +253,28 @@ class _IntermediateProgramPageState extends State<IntermediateProgramPage> {
             onTap: () {
               if (kDebugMode) {
                 print('Selected ${e.exerciseName}');
+              }
+              switch (e.exerciseName) {
+                case 'Pull Ups':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const PullupPage())));
+                  break;
+                case 'Dead Lifts':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const DeadliftsPage())));
+                  break;
+                case 'Bench Press':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const BenchpressPage())));
+                  break;
+                case 'Lunges':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const LungesPage())));
+                  break;
+                case 'Overhead Press':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const OverheadPressPage())));
+                  break;
+                case 'Squats':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const SquatsPage())));
+                  break;
+                default:
+                  break;
               }
             },
           ),

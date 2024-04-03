@@ -1,6 +1,14 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/classes/advanced_exercises.dart';
+import 'package:personal_project/ui/benchpress_page.dart';
+import 'package:personal_project/ui/deadlifts_page.dart';
+import 'package:personal_project/ui/dips_page.dart';
+import 'package:personal_project/ui/lunges_page.dart';
+import 'package:personal_project/ui/overhead_press_page.dart';
+import 'package:personal_project/ui/pullups_page.dart';
+import 'package:personal_project/ui/rows_page.dart';
+import 'package:personal_project/ui/squats_page.dart';
 
 class AdvancedProgramPage extends StatefulWidget {
   const AdvancedProgramPage({super.key});
@@ -247,6 +255,34 @@ class _AdvancedProgramPageState extends State<AdvancedProgramPage> {
               //add switch statement for strings to route to exercises pages
               if (kDebugMode) {
                 print('Selected ${e.exerciseName}');
+              }
+              switch (e.exerciseName) {
+                case 'Pull Ups':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const PullupPage())));
+                  break;
+                case 'Dead Lifts':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const DeadliftsPage())));
+                  break;
+                case 'Bench Press':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const BenchpressPage())));
+                  break;
+                case 'Dips':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const DipsPage())));
+                  break;
+                case 'Lunges':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const LungesPage())));
+                  break;
+                case 'Overhead Press':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const OverheadPressPage())));
+                  break;
+                case 'Rows':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const RowsPage())));
+                  break;
+                case 'Squats':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const SquatsPage())));
+                  break;
+                default:
+                  break;
               }
             },
           ),

@@ -1,6 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/classes/beginner_exercises.dart';
+import 'package:personal_project/ui/benchpress_page.dart';
+import 'package:personal_project/ui/deadlifts_page.dart';
+import 'package:personal_project/ui/overhead_press_page.dart';
+import 'package:personal_project/ui/squats_page.dart';
 
 class BeginnerProgramPage extends StatefulWidget {
   const BeginnerProgramPage({super.key});
@@ -246,6 +250,22 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
             onTap: () {
               if (kDebugMode) {
                 print('Selected ${e.exerciseName}');
+              }
+              switch (e.exerciseName) {
+                case 'Dead Lifts':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const DeadliftsPage())));
+                  break;
+                case 'Bench Press':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const BenchpressPage())));
+                  break;
+                case 'Overhead Press':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const OverheadPressPage())));
+                  break;
+                case 'Squats':
+                    Navigator.push(context, MaterialPageRoute(builder: ((context) => const SquatsPage())));
+                  break;
+                default:
+                  break;
               }
             },
           ),
