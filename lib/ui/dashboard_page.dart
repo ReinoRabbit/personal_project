@@ -50,7 +50,7 @@ class _DashboardPageState extends State<DashboardPage> {
                       padding: EdgeInsets.all(40.0),
                       child: Center(
                         child: Text(
-                          '"Just believe in yourself. Even if you dont, just pretend that you do and at some point you will" ~ Venus Williams',
+                          "Just believe in yourself. Even if you don't, just pretend that you do and at some point you will ~ Venus Williams",
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold,
