@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_project/classes/advanced_exercises.dart';
 
-
 class AdvancedProgramPage extends StatefulWidget {
   const AdvancedProgramPage({super.key});
 
@@ -245,6 +244,7 @@ class _AdvancedProgramPageState extends State<AdvancedProgramPage> {
           DataCell(
             Text(e.exerciseName),
             onTap: () {
+              //add switch statement for strings to route to exercises pages
               if (kDebugMode) {
                 print('Selected ${e.exerciseName}');
               }
