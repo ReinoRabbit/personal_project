@@ -246,7 +246,12 @@ class _BeginnerProgramPageState extends State<BeginnerProgramPage> {
           },
           cells: [
           DataCell(
-            Text(e.exerciseName),
+            Row(
+              children: [
+                Text(e.exerciseName),
+                const Icon(Icons.arrow_forward, size: 15),
+              ],
+            ),
             onTap: () {
               if (kDebugMode) {
                 print('Selected ${e.exerciseName}');

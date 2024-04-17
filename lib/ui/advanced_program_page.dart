@@ -250,7 +250,12 @@ class _AdvancedProgramPageState extends State<AdvancedProgramPage> {
           },
           cells: [
           DataCell(
-            Text(e.exerciseName),
+            Row(
+              children: [
+                Text(e.exerciseName),
+                const Icon(Icons.arrow_forward, size: 15),
+              ],
+            ),
             onTap: () {
               //add switch statement for strings to route to exercises pages
               if (kDebugMode) {
